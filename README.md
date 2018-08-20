@@ -1,4 +1,6 @@
-# rasa-core-and-nlu-docker-compose
+# Using Rasa NLU with Docker
+## The easiest way to get started working with Rasa
+
 Rasa core and rasa nlu enviroment for local enviroment with moodbot example from official [Rasa Stack documentation](http://rasa.com/)
 
 
@@ -6,8 +8,9 @@ Rasa core and rasa nlu enviroment for local enviroment with moodbot example from
 
 
 ### Clone project:
+
 ```
-git clone https://github.com/sasastarcevic/rasa-core-and-nlu-docker-compose.git
+git clone https://github.com/botsbrasil/rasa-core-and-nlu-docker-compose.git
 ```
 
 ### Go to project
@@ -16,6 +19,7 @@ cd rasa-core-and-nlu-docker-compose
 ```
 
 ### Build docker-compose file
+
 ```
 docker-compose build
 ```
@@ -23,11 +27,13 @@ Note: First time it can take 5-10 min!
 
 
 ### Run docker-compose
+
 ```
 docker-compose up -d
 ```
 
 ### Check status of Rasa Stack container
+
 ```
 docker ps -as
 ```
@@ -39,6 +45,7 @@ CONTAINER ID        IMAGE                COMMAND                  CREATED       
 ```
 
 ### Attach to rasa_core container
+
 ```
 docker exec -it 40ba123eecdb bash
 ```
@@ -49,11 +56,13 @@ cd examples/moodbot/
 ```
 
 ### Execute run-rasa-server.sh script and wait until Rasa Core server is started
+
 ```
 ./run-rasa-core.sh
 ```
 
 ### Rasa Core server started sucessfully
+
 ```
 Using TensorFlow backend.
 2018-04-18 21:13:33+0000 [-] Log opened.
@@ -63,6 +72,7 @@ Using TensorFlow backend.
 
 
 ## Check Rasa Nlu Rest API
+
 ```
 curl 'http://localhost:5000/parse?q=hello'
 ```
